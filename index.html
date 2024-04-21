@@ -179,9 +179,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2024-04-21 15:25:40 / Modified: 23:21:42" itemprop="dateCreated datePublished" datetime="2024-04-21T15:25:40+09:00">2024-04-21</time>
+      <time title="Created: 2024-04-21 15:25:40" itemprop="dateCreated datePublished" datetime="2024-04-21T15:25:40+09:00">2024-04-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-04-22 00:00:22" itemprop="dateModified" datetime="2024-04-22T00:00:22+09:00">2024-04-22</time>
     </span>
 
   
@@ -221,6 +227,15 @@
 <li>cat hello.txt : 파일 내용 출력</li>
 <li>cat -e hello.txt : 출력 내용의 각 줄의 맨뒤에 $ 붙이기(숨겨진 공백 확인 가능)</li>
 <li>cat -n hello.txt : 출력 내용의 각 줄 맨앞에 줄번호 붙이기</li>
+</ul>
+<h3 id="rm"><a href="#rm" class="headerlink" title="rm"></a>rm</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ rm [option] [파일명 or 폴더명]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>rm [파일명] : 지정 디렉토리내 해당 파일 삭제</li>
+<li>rm -r [폴더명] : 지정 디렉토리와 그 안에 있는 모든 하위 디렉토리와 파일 삭제</li>
+<li>rm -f : 삭제시 모든 확인 요청 무시하고 강제 삭제</li>
+<li>rm hello.txt : 현 디렉토리 내 hello.txt 파일 삭제</li>
+<li>rm .&#x2F;TIL : 현 디렉토리에 있는 TIL 폴더 삭제(그 폴더 및 하위 폴더와 파일들 모두)</li>
+<li>rm -rf .&#x2F;TIL : 확실히 삭제할 생각이면 이렇게 하면 됨(삭제후 취소불가)</li>
 </ul>
 
       
