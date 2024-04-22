@@ -169,7 +169,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/04/22/TIL-3-Git-Branch/" class="post-title-link" itemprop="url">TIL-3-Git Branch</a>
+          <a href="/2024/04/22/TIL-3-Git-Branch/" class="post-title-link" itemprop="url">(TIL-3) Git Branch</a>
         </h2>
 
         <div class="post-meta-container">
@@ -179,9 +179,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2024-04-22 10:09:05 / Modified: 14:37:28" itemprop="dateCreated datePublished" datetime="2024-04-22T10:09:05+09:00">2024-04-22</time>
+      <time title="Created: 2024-04-22 10:09:05" itemprop="dateCreated datePublished" datetime="2024-04-22T10:09:05+09:00">2024-04-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-04-23 00:17:12" itemprop="dateModified" datetime="2024-04-23T00:17:12+09:00">2024-04-23</time>
     </span>
 
   
@@ -198,17 +204,14 @@
 <p>git branch</p>
 </blockquote>
 <ul>
-<li>local branch 목록</li>
+<li>현 로컬 저장소(local repository)의 모든 branch 목록 확인</li>
 </ul>
 <blockquote>
 <p>git branch -r</p>
 </blockquote>
-<p><img src="/image-1.png" alt="alt text"></p>
-<blockquote>
-<p>git remote -v</p>
-</blockquote>
 <ul>
-<li>remote branch 목록과 head 확인</li>
+<li>현 로컬 저장소(local repository)와 연결된 원격 저장소(remote repository)의 모든 branch 목록 확인</li>
+<li>로컬 저장소의 브랜치가 아니라 원격 저장소의 브랜치 목록이란 점 주의!<br><img src="/image-1.png" alt="alt text"></li>
 </ul>
 <blockquote>
 <p>git branch -a</p>
@@ -217,16 +220,23 @@
 <li>local과 remote branch 목록 모두 확인</li>
 </ul>
 <blockquote>
+<p>git remote -v</p>
+</blockquote>
+<ul>
+<li>현 로컬 저장소에 연결된 모든 원격 저장소의 목록을 보여줌</li>
+<li>v&#x3D;(verbose) 각 원격 저장소의 이름(보통 origin)과 해당 원격 저장소의 url을 보여줌</li>
+</ul>
+<blockquote>
 <p>git branch py-init</p>
 </blockquote>
 <ul>
-<li>local에 <code>py-init</code>라는 branch 생성</li>
+<li>local 저장소에 <code>py-init</code>라는 로컬 branch 생성</li>
 </ul>
 <blockquote>
 <p>git switch py-init</p>
 </blockquote>
 <ul>
-<li><code>py-init</code>라는 branch로 이동<br><img src="/image.png" alt="alt text"></li>
+<li>로컬 저장소에 연결된 <code>py-init</code>라는 branch로 이동<br><img src="/image.png" alt="alt text"></li>
 </ul>
 <blockquote>
 <p>git branch -D py-init</p>
@@ -247,6 +257,7 @@
 </blockquote>
 <ul>
 <li>github에 없던 branch를 처음 push할때는 <code>-u</code>를 딱 한번 써야함</li>
+<li>git push -u origin 명령은 현재 브랜치의 변경사항을 origin이라는 원격 저장소로 푸시하면서, 해당 브랜치를 기본 원격 브랜치로 설정하는 역할을 합니다. 이로써 추후에 동일 브랜치에서 git push나 git pull 명령을 실행할 때 원격지와 브랜치를 지정할 필요 없이 간단하게 명령을 실행할 수 있게 됩니다.</li>
 </ul>
 <blockquote>
 <p>git pull origin main</p>
