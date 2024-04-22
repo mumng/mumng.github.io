@@ -20,34 +20,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"mumng.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"Pisces | Gemini":240},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="git branch   local branch 목록   git branch -r    git remote -v   remote branch 목록과 head 확인   git branch -a   local과 remote branch 목록 모두 확인   git branch py-init   local에 py-init라는 branch 생성   git switc">
+    <meta name="description" content="linux 명령어 정리ls (&#x3D; list)1$ ls [option]  ls : 현 디렉토리내 폴더, 파일 목록 조회 ls -l : 각 폴다와 파일 생성 날짜등 추가정보 포함 ls -a : 숨김파일(ex .bash등)까지 조회 ls -a -l (&#x3D; ls -al) : -a와 -l 둘다 적용 ls *.exe : 확장자가 *.exe 인 파일 목록">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TIL3">
-<meta property="og:url" content="http://mumng.github.io/2024/04/22/TIL3/index.html">
+<meta property="og:title" content="(TIL-2) linux 명령어 정리">
+<meta property="og:url" content="http://mumng.github.io/2024/04/21/TIL-2-Linux-command/index.html">
 <meta property="og:site_name" content="dev note by mumng">
-<meta property="og:description" content="git branch   local branch 목록   git branch -r    git remote -v   remote branch 목록과 head 확인   git branch -a   local과 remote branch 목록 모두 확인   git branch py-init   local에 py-init라는 branch 생성   git switc">
+<meta property="og:description" content="linux 명령어 정리ls (&#x3D; list)1$ ls [option]  ls : 현 디렉토리내 폴더, 파일 목록 조회 ls -l : 각 폴다와 파일 생성 날짜등 추가정보 포함 ls -a : 숨김파일(ex .bash등)까지 조회 ls -a -l (&#x3D; ls -al) : -a와 -l 둘다 적용 ls *.exe : 확장자가 *.exe 인 파일 목록">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://mumng.github.io/image-1.png">
-<meta property="og:image" content="http://mumng.github.io/image.png">
-<meta property="og:image" content="http://mumng.github.io/image-3.png">
-<meta property="og:image" content="http://mumng.github.io/image-4.png">
-<meta property="og:image" content="http://mumng.github.io/image-5.png">
-<meta property="article:published_time" content="2024-04-22T01:09:05.000Z">
-<meta property="article:modified_time" content="2024-04-22T03:42:55.428Z">
+<meta property="article:published_time" content="2024-04-21T06:25:40.000Z">
+<meta property="article:modified_time" content="2024-04-22T04:57:43.989Z">
 <meta property="article:author" content="mumng">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://mumng.github.io/image-1.png">
 
 
-<link rel="canonical" href="http://mumng.github.io/2024/04/22/TIL3/">
+<link rel="canonical" href="http://mumng.github.io/2024/04/21/TIL-2-Linux-command/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://mumng.github.io/2024/04/22/TIL3/","path":"2024/04/22/TIL3/","title":"TIL3"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://mumng.github.io/2024/04/21/TIL-2-Linux-command/","path":"2024/04/21/TIL-2-Linux-command/","title":"(TIL-2) linux 명령어 정리"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>TIL3 | dev note by mumng</title>
+<title>(TIL-2) linux 명령어 정리 | dev note by mumng</title>
   
 
 
@@ -99,7 +93,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -112,6 +106,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#linux-%EB%AA%85%EB%A0%B9%EC%96%B4-%EC%A0%95%EB%A6%AC"><span class="nav-number">1.</span> <span class="nav-text">linux 명령어 정리</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ls-list"><span class="nav-number">1.1.</span> <span class="nav-text">ls (&#x3D; list)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#touch"><span class="nav-number">1.2.</span> <span class="nav-text">touch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cat"><span class="nav-number">1.3.</span> <span class="nav-text">cat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rm"><span class="nav-number">1.4.</span> <span class="nav-text">rm</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -160,7 +155,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://mumng.github.io/2024/04/22/TIL3/">
+    <link itemprop="mainEntityOfPage" href="http://mumng.github.io/2024/04/21/TIL-2-Linux-command/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -173,12 +168,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="TIL3 | dev note by mumng">
+      <meta itemprop="name" content="(TIL-2) linux 명령어 정리 | dev note by mumng">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          TIL3
+          (TIL-2) linux 명령어 정리
         </h1>
 
         <div class="post-meta-container">
@@ -188,9 +183,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2024-04-22 10:09:05 / Modified: 12:42:55" itemprop="dateCreated datePublished" datetime="2024-04-22T10:09:05+09:00">2024-04-22</time>
+      <time title="Created: 2024-04-21 15:25:40" itemprop="dateCreated datePublished" datetime="2024-04-21T15:25:40+09:00">2024-04-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-04-22 13:57:43" itemprop="dateModified" datetime="2024-04-22T13:57:43+09:00">2024-04-22</time>
     </span>
 
   
@@ -202,65 +203,38 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><blockquote>
-<p>git branch</p>
-</blockquote>
+    <div class="post-body" itemprop="articleBody"><h2 id="linux-명령어-정리"><a href="#linux-명령어-정리" class="headerlink" title="linux 명령어 정리"></a>linux 명령어 정리</h2><h3 id="ls-list"><a href="#ls-list" class="headerlink" title="ls (&#x3D; list)"></a>ls (&#x3D; list)</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ls [option]</span><br></pre></td></tr></table></figure>
 <ul>
-<li>local branch 목록</li>
+<li>ls : 현 디렉토리내 폴더, 파일 목록 조회</li>
+<li>ls -l : 각 폴다와 파일 생성 날짜등 추가정보 포함</li>
+<li>ls -a : 숨김파일(ex .bash등)까지 조회</li>
+<li>ls -a -l (&#x3D; ls -al) : -a와 -l 둘다 적용</li>
+<li>ls *.exe : 확장자가 *.exe 인 파일 목록 조회</li>
 </ul>
-<blockquote>
-<p>git branch -r</p>
-</blockquote>
-<p><img src="/image-1.png" alt="alt text"></p>
-<blockquote>
-<p>git remote -v</p>
-</blockquote>
+<h3 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ touch [파일명]</span><br></pre></td></tr></table></figure>
 <ul>
-<li>remote branch 목록과 head 확인</li>
+<li>파일이 존재하면 마지막 수정시간을 현재시간으로만 변경</li>
+<li>파일이 없으면 해당 이름의 파일 생성(크기는 0 byte로) </li>
+<li>주로 새파일 생성해주는 용도로 사용</li>
+<li>touch hello.txt : 현 디렉토리에 hello.txt 없으면 파일 생성해줌</li>
+<li>touch .hello.txt : 숨김 파일도 만들어줌</li>
 </ul>
-<blockquote>
-<p>git branch -a</p>
-</blockquote>
+<h3 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cat [option] [file]</span><br></pre></td></tr></table></figure>
 <ul>
-<li>local과 remote branch 목록 모두 확인</li>
+<li>주로 txt 파일 출력할때 사용</li>
+<li>정확한 의미는 input 과 output을 연결<br> (input &#x3D; [file], output &#x3D; standard output)</li>
+<li>cat hello.txt : 파일 내용 출력</li>
+<li>cat -e hello.txt : 출력 내용의 각 줄의 맨뒤에 $ 붙이기(숨겨진 공백 확인 가능)</li>
+<li>cat -n hello.txt : 출력 내용의 각 줄 맨앞에 줄번호 붙이기</li>
 </ul>
-<blockquote>
-<p>git branch py-init</p>
-</blockquote>
+<h3 id="rm"><a href="#rm" class="headerlink" title="rm"></a>rm</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ rm [option] [파일명 or 폴더명]</span><br></pre></td></tr></table></figure>
 <ul>
-<li>local에 <code>py-init</code>라는 branch 생성</li>
-</ul>
-<blockquote>
-<p>git switch py-init</p>
-</blockquote>
-<ul>
-<li><code>py-init</code>라는 branch로 이동<br><img src="/image.png" alt="alt text"></li>
-</ul>
-<blockquote>
-<p>git branch -D py-init</p>
-</blockquote>
-<ul>
-<li>py-init branch 삭제<br><img src="/image-3.png" alt="alt text"></li>
-</ul>
-<blockquote>
-<p>git 사용 중 conflict가 발생하는 경우!<br><img src="/image-4.png" alt="alt text"></p>
-</blockquote>
-<ul>
-<li>이런 경우 충돌이 일어난 파일을 결국 프로그래머가 중재해서 하나로 통일시켜야함.</li>
-<li>즉 지울것 지우고 바꿀꺼 바꿔서 다시 commit, git push 하면 다음과같이 visualize됨</li>
-<li>conflict를 중재하고 github에 commit하면 이렇게 보임<br> <img src="/image-5.png" alt="alt text"></li>
-</ul>
-<blockquote>
-<p>git push -u origin gh-fb</p>
-</blockquote>
-<ul>
-<li>github에 없던 branch를 처음 push할때는 <code>-u</code>를 딱 한번 써야함</li>
-</ul>
-<blockquote>
-<p>git pull origin main</p>
-</blockquote>
-<ul>
-<li>remote에 있는 사항을 local에 업데이트(github과 동기화)</li>
+<li>rm [파일명] : 지정 디렉토리내 해당 파일 삭제</li>
+<li>rm -r [폴더명] : 지정 디렉토리와 그 안에 있는 모든 하위 디렉토리와 파일 삭제</li>
+<li>rm -f : 삭제시 모든 확인 요청 무시하고 강제 삭제</li>
+<li>rm hello.txt : 현 디렉토리 내 hello.txt 파일 삭제</li>
+<li>rm .&#x2F;TIL : 현 디렉토리에 있는 TIL 폴더 삭제(그 폴더 및 하위 폴더와 파일들 모두)</li>
+<li>rm -rf .&#x2F;TIL : 확실히 삭제할 생각이면 이렇게 하면 됨(삭제후 취소불가)</li>
 </ul>
 
     </div>
@@ -275,11 +249,14 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/04/21/TIL-2-linux-command/" rel="prev" title="(TIL-2) linux 명령어 정리">
-                  <i class="fa fa-angle-left"></i> (TIL-2) linux 명령어 정리
+                <a href="/2024/04/21/TIL-1-Markdown/" rel="prev" title="(TIL-1) Markdown 문법">
+                  <i class="fa fa-angle-left"></i> (TIL-1) Markdown 문법
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2024/04/22/TIL-3-Git-Branch/" rel="next" title="TIL-3-Git Branch">
+                  TIL-3-Git Branch <i class="fa fa-angle-right"></i>
+                </a>
             </div>
           </div>
     </footer>
