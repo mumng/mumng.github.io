@@ -33,7 +33,7 @@
 <meta property="og:image" content="http://mumng.github.io/image-4.png">
 <meta property="og:image" content="http://mumng.github.io/image-5.png">
 <meta property="article:published_time" content="2024-04-22T01:09:05.000Z">
-<meta property="article:modified_time" content="2024-04-22T04:57:45.049Z">
+<meta property="article:modified_time" content="2024-04-22T05:37:28.349Z">
 <meta property="article:author" content="mumng">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
@@ -190,7 +190,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-04-22 10:09:05 / Modified: 13:57:45" itemprop="dateCreated datePublished" datetime="2024-04-22T10:09:05+09:00">2024-04-22</time>
+      <time title="Created: 2024-04-22 10:09:05 / Modified: 14:37:28" itemprop="dateCreated datePublished" datetime="2024-04-22T10:09:05+09:00">2024-04-22</time>
     </span>
 
   
@@ -261,6 +261,32 @@
 </blockquote>
 <ul>
 <li>remote에 있는 사항을 local에 업데이트(github과 동기화)</li>
+</ul>
+<blockquote>
+<p>git mv main.py hello.py</p>
+</blockquote>
+<ul>
+<li>그냥 &#96;mv main.py hello.py’라고 하면 파일명을 바꿔주고 끝</li>
+<li>git을 앞에 붙이면 파일명 변환과 함께 git add가 동시에 반영되서 stage에 자동으로 올라감. 즉 add 없이 commit만 하면 됨.</li>
+</ul>
+<blockquote>
+<p>git restore hello.py</p>
+</blockquote>
+<ul>
+<li>hello.py  파일을 최신 commit 상태로 되돌려준다.</li>
+<li>최신 commit 이후 파일을 수정했는데 되돌리고 싶을때 사용</li>
+</ul>
+<blockquote>
+<p>git restore –stage README.md<br>git reset HEAD README.md</p>
+</blockquote>
+<ul>
+<li>둘다 README.md라는 파일이 staged된 상태(git add 실행후)에서 unstaged상태로 되돌려준다.</li>
+</ul>
+<blockquote>
+<p>git commit –amend</p>
+</blockquote>
+<ul>
+<li>마지막에 commit한 것의 commit message를 수정해주는 명령어</li>
 </ul>
 
     </div>
