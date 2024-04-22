@@ -27,17 +27,17 @@
 <meta property="og:site_name" content="dev note by mumng">
 <meta property="og:description" content="git branch   현 로컬 저장소(local repository)의 모든 branch 목록 확인   git branch -r   현 로컬 저장소(local repository)와 연결된 원격 저장소(remote repository)의 모든 branch 목록 확인 로컬 저장소의 브랜치가 아니라 원격 저장소의 브랜치 목록이란 점 주의!   git bra">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://mumng.github.io/image-1.png">
-<meta property="og:image" content="http://mumng.github.io/image.png">
-<meta property="og:image" content="http://mumng.github.io/image-3.png">
-<meta property="og:image" content="http://mumng.github.io/image-4.png">
-<meta property="og:image" content="http://mumng.github.io/image-5.png">
+<meta property="og:image" content="http://mumng.github.io/images/image-1.png">
+<meta property="og:image" content="http://mumng.github.io/images/image.png">
+<meta property="og:image" content="http://mumng.github.io/images/image-2.png">
+<meta property="og:image" content="http://mumng.github.io/images/image-4.png">
+<meta property="og:image" content="http://mumng.github.io/images/image-5.png">
 <meta property="article:published_time" content="2024-04-22T01:09:05.000Z">
-<meta property="article:modified_time" content="2024-04-22T15:17:12.337Z">
+<meta property="article:modified_time" content="2024-04-22T23:50:23.296Z">
 <meta property="article:author" content="mumng">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://mumng.github.io/image-1.png">
+<meta name="twitter:image" content="http://mumng.github.io/images/image-1.png">
 
 
 <link rel="canonical" href="http://mumng.github.io/2024/04/22/TIL-3-Git-Branch/">
@@ -196,7 +196,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-04-23 00:17:12" itemprop="dateModified" datetime="2024-04-23T00:17:12+09:00">2024-04-23</time>
+      <time title="Modified: 2024-04-23 08:50:23" itemprop="dateModified" datetime="2024-04-23T08:50:23+09:00">2024-04-23</time>
     </span>
 
   
@@ -219,7 +219,7 @@
 </blockquote>
 <ul>
 <li>현 로컬 저장소(local repository)와 연결된 원격 저장소(remote repository)의 모든 branch 목록 확인</li>
-<li>로컬 저장소의 브랜치가 아니라 원격 저장소의 브랜치 목록이란 점 주의!<br><img src="/image-1.png" alt="alt text"></li>
+<li>로컬 저장소의 브랜치가 아니라 원격 저장소의 브랜치 목록이란 점 주의!<br><img src="/../images/image-1.png" alt="alt text"></li>
 </ul>
 <blockquote>
 <p>git branch -a</p>
@@ -244,21 +244,21 @@
 <p>git switch py-init</p>
 </blockquote>
 <ul>
-<li>로컬 저장소에 연결된 <code>py-init</code>라는 branch로 이동<br><img src="/image.png" alt="alt text"></li>
+<li>로컬 저장소에 연결된 <code>py-init</code>라는 branch로 이동<br><img src="/../images/image.png" alt="alt text"></li>
 </ul>
 <blockquote>
 <p>git branch -D py-init</p>
 </blockquote>
 <ul>
-<li>py-init branch 삭제<br><img src="/image-3.png" alt="alt text"></li>
+<li>py-init branch 삭제<br><img src="/../images/image-2.png" alt="alt text"></li>
 </ul>
 <blockquote>
-<p>git 사용 중 conflict가 발생하는 경우!<br><img src="/image-4.png" alt="alt text"></p>
+<p>git 사용 중 conflict가 발생하는 경우!<br><img src="/../images/image-4.png" alt="alt text"></p>
 </blockquote>
 <ul>
 <li>이런 경우 충돌이 일어난 파일을 결국 프로그래머가 중재해서 하나로 통일시켜야함.</li>
 <li>즉 지울것 지우고 바꿀꺼 바꿔서 다시 commit, git push 하면 다음과같이 visualize됨</li>
-<li>conflict를 중재하고 github에 commit하면 이렇게 보임<br> <img src="/image-5.png" alt="alt text"></li>
+<li>conflict를 중재하고 github에 commit하면 이렇게 보임<br> <img src="/../images/image-5.png" alt="alt text"></li>
 </ul>
 <blockquote>
 <p>git push -u origin gh-fb</p>
