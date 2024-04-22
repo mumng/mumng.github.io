@@ -116,7 +116,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -142,6 +142,135 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://mumng.github.io/2024/04/22/TIL3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="mumng">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dev note by mumng">
+      <meta itemprop="description" content="개발과 관련된 내용 기록하는 블로그">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | dev note by mumng">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/04/22/TIL3/" class="post-title-link" itemprop="url">TIL3</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2024-04-22 10:09:05 / Modified: 12:42:55" itemprop="dateCreated datePublished" datetime="2024-04-22T10:09:05+09:00">2024-04-22</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>git branch</p>
+</blockquote>
+<ul>
+<li>local branch 목록</li>
+</ul>
+<blockquote>
+<p>git branch -r</p>
+</blockquote>
+<p><img src="/image-1.png" alt="alt text"></p>
+<blockquote>
+<p>git remote -v</p>
+</blockquote>
+<ul>
+<li>remote branch 목록과 head 확인</li>
+</ul>
+<blockquote>
+<p>git branch -a</p>
+</blockquote>
+<ul>
+<li>local과 remote branch 목록 모두 확인</li>
+</ul>
+<blockquote>
+<p>git branch py-init</p>
+</blockquote>
+<ul>
+<li>local에 <code>py-init</code>라는 branch 생성</li>
+</ul>
+<blockquote>
+<p>git switch py-init</p>
+</blockquote>
+<ul>
+<li><code>py-init</code>라는 branch로 이동<br><img src="/image.png" alt="alt text"></li>
+</ul>
+<blockquote>
+<p>git branch -D py-init</p>
+</blockquote>
+<ul>
+<li>py-init branch 삭제<br><img src="/image-3.png" alt="alt text"></li>
+</ul>
+<blockquote>
+<p>git 사용 중 conflict가 발생하는 경우!<br><img src="/image-4.png" alt="alt text"></p>
+</blockquote>
+<ul>
+<li>이런 경우 충돌이 일어난 파일을 결국 프로그래머가 중재해서 하나로 통일시켜야함.</li>
+<li>즉 지울것 지우고 바꿀꺼 바꿔서 다시 commit, git push 하면 다음과같이 visualize됨</li>
+<li>conflict를 중재하고 github에 commit하면 이렇게 보임<br> <img src="/image-5.png" alt="alt text"></li>
+</ul>
+<blockquote>
+<p>git push -u origin gh-fb</p>
+</blockquote>
+<ul>
+<li>github에 없던 branch를 처음 push할때는 <code>-u</code>를 딱 한번 써야함</li>
+</ul>
+<blockquote>
+<p>git pull origin main</p>
+</blockquote>
+<ul>
+<li>remote에 있는 사항을 local에 업데이트(github과 동기화)</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -187,7 +316,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-04-22 00:00:22" itemprop="dateModified" datetime="2024-04-22T00:00:22+09:00">2024-04-22</time>
+      <time title="Modified: 2024-04-22 00:02:36" itemprop="dateModified" datetime="2024-04-22T00:02:36+09:00">2024-04-22</time>
     </span>
 
   
@@ -213,12 +342,8 @@
 <li>파일이 존재하면 마지막 수정시간을 현재시간으로만 변경</li>
 <li>파일이 없으면 해당 이름의 파일 생성(크기는 0 byte로) </li>
 <li>주로 새파일 생성해주는 용도로 사용</li>
-<li>touch hello.txt </li>
-<li>현 디렉토리에 hello.txt 없으면 파일 생성해줌</li>
-<li>touch .hello.txt<blockquote>
-<p>숨김 파일도 만들어줌</p>
-</blockquote>
-</li>
+<li>touch hello.txt : 현 디렉토리에 hello.txt 없으면 파일 생성해줌</li>
+<li>touch .hello.txt : 숨김 파일도 만들어줌</li>
 </ul>
 <h3 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cat [option] [file]</span><br></pre></td></tr></table></figure>
 <ul>
