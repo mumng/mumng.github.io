@@ -181,7 +181,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-04-28 13:45:04 / Modified: 15:59:16" itemprop="dateCreated datePublished" datetime="2024-04-28T13:45:04+09:00">2024-04-28</time>
+      <time title="Created: 2024-04-28 13:45:04 / Modified: 16:57:03" itemprop="dateCreated datePublished" datetime="2024-04-28T13:45:04+09:00">2024-04-28</time>
     </span>
 
   
@@ -194,7 +194,35 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="1차원-데이터-분석"><a href="#1차원-데이터-분석" class="headerlink" title="1차원 데이터 분석"></a>1차원 데이터 분석</h3><h4 id="분산-표준편차"><a href="#분산-표준편차" class="headerlink" title="분산, 표준편차"></a>분산, 표준편차</h4><blockquote>
+          <h3 id="정규화-표준화"><a href="#정규화-표준화" class="headerlink" title="정규화, 표준화"></a>정규화, 표준화</h3><blockquote>
+<ul>
+<li>머신러닝과 딥러닝에서 데이터 전처리는 모델의 성능에 결정적인 영향을 미치며, 그 중에서도 정규화와 표준화는 특히 중요한 기법들입니다. </li>
+<li>정규화와 표준화는 둘다 데이터의 스케일을 조정하는 방법이다.</li>
+</ul>
+</blockquote>
+<h4 id="정의"><a href="#정의" class="headerlink" title="정의"></a>정의</h4><blockquote>
+<ul>
+<li>정규화(Normalization)는 다양한 크기의 데이터를 특정 범위(보통 0~1)로 조정하는 방법</li>
+<li>데이터 $x_i$를 정규화(0~1)된 데이터 $x_{i, normalization}$으로 변환하는 방법:<br>$$ x_{i,normalizaiton} &#x3D; \frac{x_i - x_{min}}{x_{max} - x_{min}}$$</li>
+<li>표준화는 데이터의 평균이 0, 표준편차가 1이 되도록 조정하는 방법이다.</li>
+<li>데이터 $x_i$를 표준화된 데이터 $x_{i, standardization}$으로 변환하는 방법:<br>$$x_{i,standardication} &#x3D; \frac{x_i - \overline{x}}{s}$$<br>$\overline{x}$ : n개의 데이터 $x_1 ~ x_n$에 대한 평균<br>$s$ : n개의 데이터에 대한 표준편차(Standardization)</li>
+</ul>
+</blockquote>
+<h4 id="정규화의-필요성"><a href="#정규화의-필요성" class="headerlink" title="정규화의 필요성"></a>정규화의 필요성</h4><blockquote>
+<ul>
+<li><strong>데이터 간 스케일 일치</strong>: 데이터 세트 내에 각 데이터들은 <strong>단위</strong>나 <strong>스케일</strong>이 당연히 다양하다. 그때 크기가 큰 특성이 결과에 더 큰 영향을 미칠 수 있습니다. 예를 들어, 주택 가격을 예측할 때 면적(제곱미터)과 방의 수(정수)가 있으면 면적의 스케일이 훨씬 크기 때문에 이 특성이 결과에 더 큰 영향을 미칠 수 있다.</li>
+<li>정규화를 통해 이러한 데이터들을 동일한 범위 (0과 1 사이)로 조정하여 모델이 공정하게 데이터를 학습할 수 있도록 도와줍니다. </li>
+<li><strong>학습 속도 향상</strong>: 경사 하강법 같은 최적화 알고리즘은 정규화를 통해 특성들이 비슷한 범위에 있을 때 더 빠르게 수렴합니다. 다른 스케일의 데이터는 경사면이 불균형하게 되어 최적점에 도달하는 데 더 오랜 시간이 걸릴 수 있습니다.</li>
+</ul>
+</blockquote>
+<h4 id="표준화의-필요성"><a href="#표준화의-필요성" class="headerlink" title="표준화의 필요성"></a>표준화의 필요성</h4><blockquote>
+<ul>
+<li><strong>평균과 분산의 조정</strong>: 표준화는 데이터의 <strong>평균 &#x3D; 0</strong>으로, <strong>분산 &#x3D; 1</strong>로 조정합니다. 이는 많은 기계 학습 알고리즘, 특히 가중치를 사용하는 알고리즘(선형 회귀, 로지스틱 회귀, 신경망 등)에서 중요합니다. 평균이 0이 되면 학습 과정에서의 계산이 단순해지고, 분산이 1이 되면 모든 특성이 동일한 중요도를 갖게 됩니다.</li>
+<li><strong>이상치 처리</strong>: 표준화는 이상치가 있는 데이터에 대해 더 강건하게 작동할 수 있습니다. 이상치가 존재하는 경우, 정규화는 전체 범위가 이상치에 의해 크게 영향을 받을 수 있지만, 표준화는 이상치의 영향을 상대적으로 덜 받습니다.</li>
+<li><strong>알고리즘 요구 사항 충족</strong>: 많은 머신러닝 알고리즘, 특히 서포트 벡터 머신(SVM)이나 주성분 분석(PCA) 같은 알고리즘은 데이터가 정규 분포를 따를 때 최적의 성능을 보여줍니다. 표준화는 데이터를 정규 분포와 유사하게 만들어 이러한 알고리즘의 성능을 개선할 수 있습니다.</li>
+</ul>
+</blockquote>
+<h3 id="1차원-데이터-분석"><a href="#1차원-데이터-분석" class="headerlink" title="1차원 데이터 분석"></a>1차원 데이터 분석</h3><h4 id="분산-표준편차"><a href="#분산-표준편차" class="headerlink" title="분산, 표준편차"></a>분산, 표준편차</h4><blockquote>
 <ul>
 <li>둘다 데이터가 평균에서 얼마나 멀리 퍼져있는지를 수치화 한 값이고, 데이터와 같은 scale 혹은 단위로 만든 것이 표준편자, 그것의 제곱으로 표현된 것이 분산임.</li>
 </ul>
@@ -231,6 +259,8 @@
 <li>1에 가까우면 강한 양의 선형 관계,</li>
 <li>-1에 가까우면 강한 음의 선형 관계,</li>
 <li>0에 가까우면 선형 관계가 약하거나 없음을 의미합니다.</li>
+<li>$cor(x,y) &#x3D;\frac{cov(x,y)}{s_xs_y}$</li>
+<li>$s_x$ : 데이터 x에 대한 표준편차, $s_y$ : 데이터 y에 대한 표준편차</li>
 </ul>
 </blockquote>
 <h5 id="예제-코드"><a href="#예제-코드" class="headerlink" title="예제 코드"></a>예제 코드</h5><blockquote>
