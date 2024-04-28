@@ -181,7 +181,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-04-28 13:45:04 / Modified: 13:57:01" itemprop="dateCreated datePublished" datetime="2024-04-28T13:45:04+09:00">2024-04-28</time>
+      <time title="Created: 2024-04-28 13:45:04 / Modified: 15:57:18" itemprop="dateCreated datePublished" datetime="2024-04-28T13:45:04+09:00">2024-04-28</time>
     </span>
 
   
@@ -195,21 +195,47 @@
     
     <div class="post-body" itemprop="articleBody">
           <h3 id="1차원-데이터-분석"><a href="#1차원-데이터-분석" class="headerlink" title="1차원 데이터 분석"></a>1차원 데이터 분석</h3><hr>
-<h4 id="분산-표준편차"><a href="#분산-표준편차" class="headerlink" title="분산, 표준편차"></a>분산, 표준편차</h4><h5 id="분산"><a href="#분산" class="headerlink" title="분산"></a>분산</h5><blockquote>
-<p>설명</p>
+<h4 id="분산-표준편차"><a href="#분산-표준편차" class="headerlink" title="분산, 표준편차"></a>분산, 표준편차</h4><blockquote>
+<ul>
+<li>둘다 데이터가 평균에서 얼마나 멀리 퍼져있는지를 수치화 한 값이고, 데이터와 같은 scale 혹은 단위로 만든 것이 표준편자, 그것의 제곱으로 표현된 것이 분산임.</li>
+</ul>
 </blockquote>
-<h5 id="표준편차"><a href="#표준편차" class="headerlink" title="표준편차"></a>표준편차</h5><blockquote>
-<p>설명</p>
+<h5 id="분산-Variance-sigma"><a href="#분산-Variance-sigma" class="headerlink" title="분산 (Variance, $\sigma$)"></a>분산 (Variance, $\sigma$)</h5><blockquote>
+<ul>
+<li><strong>분산</strong>은 데이터가 평균에서 얼마나 멀리 떨어져 있는지를 수치화한 값.</li>
+<li>즉, 데이터의 흩어진 정도를 의미</li>
+<li>분산이 크면 데이터 포인트들이 평균에서 멀리 떨어져 있음을, </li>
+<li>분산이 작으면 평균 근처에 데이터가 모여 있음을 의미함.</li>
+<li>계산 방법: 각 데이터와 평균의 차이를 제곱한 후, 이 값들의 평균을 계산<br>$\sigma &#x3D; \frac{\sum_{i&#x3D;1}^n (x_i - \overline{x})^2}{n}$<br>$x_i$: $i$번째 데이터, $\overline{x}$는 데이터의 평균, $𝑛$은 데이터 수</li>
+</ul>
+</blockquote>
+<h5 id="표준편차-Standard-deviation-s"><a href="#표준편차-Standard-deviation-s" class="headerlink" title="표준편차(Standard deviation, $s$)"></a>표준편차(Standard deviation, $s$)</h5><blockquote>
+<ul>
+<li><strong>표준편차</strong>는 분산의 제곱근으로, 데이터가 평균에서 얼마나 멀리 퍼져 있는지를 나타내는 척도입니다. 분산과 마찬가지로 표준편차가 클수록 데이터가 평균에서 멀리 퍼져 있음을, 작을수록 평균에 가깝게 모여 있음을 나타냅니다.</li>
+<li>계산 방법: $s &#x3D; \sqrt{\sigma}$</li>
+</ul>
 </blockquote>
 <hr>
-<h3 id="2차원-데이터-분석"><a href="#2차원-데이터-분석" class="headerlink" title="2차원 데이터 분석"></a>2차원 데이터 분석</h3><h4 id="공분산-상관계수"><a href="#공분산-상관계수" class="headerlink" title="공분산, 상관계수"></a>공분산, 상관계수</h4><h5 id="공분산"><a href="#공분산" class="headerlink" title="공분산"></a>공분산</h5><blockquote>
-<p>설명</p>
+<h3 id="2차원-데이터-분석"><a href="#2차원-데이터-분석" class="headerlink" title="2차원 데이터 분석"></a>2차원 데이터 분석</h3><h4 id="공분산-상관계수"><a href="#공분산-상관계수" class="headerlink" title="공분산, 상관계수"></a>공분산, 상관계수</h4><h5 id="공분산-Covariance"><a href="#공분산-Covariance" class="headerlink" title="공분산 (Covariance)"></a>공분산 (Covariance)</h5><blockquote>
+<ul>
+<li><strong>분산</strong> 1차원 데이터에 대한 값이라면, <strong>공분산</strong>은 2차원 데이터 $x$와 $y$의 관계를 나타내며, 이 두 변수가 함께 변하는 경향을 수치화 한것</li>
+<li>분산은 항상 양수, 공분산은 양수와 음수 둘다 가능</li>
+<li>공분산 &gt; 양수 : 두 변수가 같은 방향으로 변하는 경향을 으미</li>
+<li>공분산 &lt; 음수 : 반대 방향으로 변하는 경향이 있습니다.</li>
+<li>$cov(x, y) &#x3D; \frac{\sum_{i&#x3D;1}^n (x_i - \overline{x})(y_i - \overline{y})}{n}$</li>
+</ul>
 </blockquote>
-<h5 id="상관계수"><a href="#상관계수" class="headerlink" title="상관계수"></a>상관계수</h5><blockquote>
-<p>설명</p>
+<h5 id="상관계수-Correlation-coefficient"><a href="#상관계수-Correlation-coefficient" class="headerlink" title="상관계수 (Correlation coefficient)"></a>상관계수 (Correlation coefficient)</h5><blockquote>
+<ul>
+<li>1차원 데이터의 <strong>표준편차</strong>와 대응하는 2차원 데이터의 <strong>상관계수</strong>는 두 변수 사이의 선형적 관계의 강도와 방향을 수치화 한 값이다.</li>
+<li>상관계수는 공분산을 표준화한 값으로 -1 ~ 1 사이의 값임.</li>
+<li>1에 가까우면 강한 양의 선형 관계,</li>
+<li>-1에 가까우면 강한 음의 선형 관계,</li>
+<li>0에 가까우면 선형 관계가 약하거나 없음을 의미합니다.</li>
+</ul>
 </blockquote>
 <h5 id="예제-코드"><a href="#예제-코드" class="headerlink" title="예제 코드"></a>예제 코드</h5><blockquote>
-<p>다음은 2차원 데이터 분석 ipynb 코드<br>10명의 학생의 영어점수, 수학점수를 이용해서<br>데이터의 시각화 및 상관관계 분석<br><a target="_blank" rel="noopener" href="https://colab.research.google.com/github/mumng/Python-note/blob/master/2D%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D.ipynb">ipynb code</a></p>
+<p>다음은 2차원 데이터 분석 ipynb 코드<br>10명의 학생의 영어점수, 수학점수를 이용해서 데이터의 시각화 및 상관관계 분석<br><a target="_blank" rel="noopener" href="https://colab.research.google.com/github/mumng/Python-note/blob/master/2D%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D.ipynb">ipynb code</a></p>
 </blockquote>
 
       
