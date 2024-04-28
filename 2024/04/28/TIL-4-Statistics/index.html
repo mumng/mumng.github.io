@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"mumng.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"Pisces | Gemini":240},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="1차원 데이터 분석 분산, 표준편차  둘다 데이터가 평균에서 얼마나 멀리 퍼져있는지를 수치화 한 값이고, 데이터와 같은 scale 혹은 단위로 만든 것이 표준편자, 그것의 제곱으로 표현된 것이 분산임.   분산 (Variance, $\sigma$)  분산은 데이터가 평균에서 얼마나 멀리 떨어져 있는지를 수치화한 값. 즉, 데이터의 흩어진 정도를 의미 분산이">
+    <meta name="description" content="1차원 데이터 분석분산, 표준편차  둘다 데이터가 평균에서 얼마나 멀리 퍼져있는지를 수치화 한 값이고, 데이터와 같은 scale 혹은 단위로 만든 것이 표준편자, 그것의 제곱으로 표현된 것이 분산임.   분산 (Variance, $\sigma$)  분산은 데이터가 평균에서 얼마나 멀리 떨어져 있는지를 수치화한 값. 즉, 데이터의 흩어진 정도를 의미 분산이">
 <meta property="og:type" content="article">
 <meta property="og:title" content="TIL-4: Statistics">
 <meta property="og:url" content="http://mumng.github.io/2024/04/28/TIL-4-Statistics/index.html">
 <meta property="og:site_name" content="dev note by mumng">
-<meta property="og:description" content="1차원 데이터 분석 분산, 표준편차  둘다 데이터가 평균에서 얼마나 멀리 퍼져있는지를 수치화 한 값이고, 데이터와 같은 scale 혹은 단위로 만든 것이 표준편자, 그것의 제곱으로 표현된 것이 분산임.   분산 (Variance, $\sigma$)  분산은 데이터가 평균에서 얼마나 멀리 떨어져 있는지를 수치화한 값. 즉, 데이터의 흩어진 정도를 의미 분산이">
+<meta property="og:description" content="1차원 데이터 분석분산, 표준편차  둘다 데이터가 평균에서 얼마나 멀리 퍼져있는지를 수치화 한 값이고, 데이터와 같은 scale 혹은 단위로 만든 것이 표준편자, 그것의 제곱으로 표현된 것이 분산임.   분산 (Variance, $\sigma$)  분산은 데이터가 평균에서 얼마나 멀리 떨어져 있는지를 수치화한 값. 즉, 데이터의 흩어진 정도를 의미 분산이">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-04-28T04:45:04.000Z">
-<meta property="article:modified_time" content="2024-04-28T06:57:18.567Z">
+<meta property="article:modified_time" content="2024-04-28T06:59:16.847Z">
 <meta property="article:author" content="mumng">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
@@ -185,7 +185,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-04-28 13:45:04 / Modified: 15:57:18" itemprop="dateCreated datePublished" datetime="2024-04-28T13:45:04+09:00">2024-04-28</time>
+      <time title="Created: 2024-04-28 13:45:04 / Modified: 15:59:16" itemprop="dateCreated datePublished" datetime="2024-04-28T13:45:04+09:00">2024-04-28</time>
     </span>
 
   
@@ -197,8 +197,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h3 id="1차원-데이터-분석"><a href="#1차원-데이터-분석" class="headerlink" title="1차원 데이터 분석"></a>1차원 데이터 분석</h3><hr>
-<h4 id="분산-표준편차"><a href="#분산-표준편차" class="headerlink" title="분산, 표준편차"></a>분산, 표준편차</h4><blockquote>
+    <div class="post-body" itemprop="articleBody"><h3 id="1차원-데이터-분석"><a href="#1차원-데이터-분석" class="headerlink" title="1차원 데이터 분석"></a>1차원 데이터 분석</h3><h4 id="분산-표준편차"><a href="#분산-표준편차" class="headerlink" title="분산, 표준편차"></a>분산, 표준편차</h4><blockquote>
 <ul>
 <li>둘다 데이터가 평균에서 얼마나 멀리 퍼져있는지를 수치화 한 값이고, 데이터와 같은 scale 혹은 단위로 만든 것이 표준편자, 그것의 제곱으로 표현된 것이 분산임.</li>
 </ul>
